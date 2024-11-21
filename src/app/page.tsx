@@ -1,11 +1,14 @@
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bb grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen  font-[family-name:var(--font-geist-sans)]">
+    <div className="font-[family-name:var(--font-geist-sans)]">
       <Header />
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start "></main>
+      <main>
+        <Hero />
+      </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
