@@ -6,3 +6,11 @@ export const formatToRupiah = (price: number) => {
     maximumFractionDigits: 0,
   }).format(price);
 };
+
+export function calculateDiscountedPrice(
+  price: number,
+  discountPercentage: number
+): number {
+  const discount = (price * discountPercentage) / 100;
+  return price - discount;
+}
