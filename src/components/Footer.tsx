@@ -35,9 +35,9 @@ const socialsMedia = [
 
 const Footer = () => {
   return (
-    <footer className="bg-CoolGray  sm:px-9 py-10 ">
+    <footer className="bg-CoolGray px-4 sm:px-9 pt-4 sm:pt-10 relative pb-9 sm:pb-28 overflow-hidden">
       <div className="flex w-fit md:w-full mx-auto md:justify-between flex-col md:flex-row gap-4">
-        <div className="w-full sm:max-w-[322px]">
+        <div className="w-full sm:max-w-[500px] md:max-w-[322px]">
           <Link href={"/"} className="flex items-center gap-2">
             <Image src={"/logo.png"} width={28} height={28} alt="logo" />
             <span className="text-xl font-bold text-PureWhite"> HypeWear</span>
@@ -55,8 +55,8 @@ const Footer = () => {
                 Pilihan Menu
               </h4>
               <ul>
-                <li>
-                  <Link href={"/"} className="text-white text-sm font-normal">
+                <li className="mt-4 mb-3">
+                  <Link href={"/"} className=" text-white text-sm font-normal">
                     Beranda
                   </Link>
                 </li>
@@ -75,7 +75,7 @@ const Footer = () => {
                 Layanan Customer
               </h4>
               <ul>
-                <li>
+                <li className="mt-4 mb-3">
                   <Link
                     href={"/help"}
                     className="text-white text-sm font-normal"
@@ -103,6 +103,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <Image
+        className="absolute -bottom-14 -right-11 "
+        src={"/cornerPattern.png"}
+        width={184}
+        height={180}
+        alt={"corner pattern"}
+      />
     </footer>
   );
 };
