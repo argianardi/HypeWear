@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       {/* Header */}
-      <header className="sticky z-[9999] top-0  w-full">
+      <header className="bg-OffWhite sticky z-[9999] top-0  w-full">
         <div className="w-full px-6  flex items-center overflow-x-hidden mx-auto space-x-4 sm:space-x-6 md:space-x-4 lg:space-x-8 py-2 gap-28">
           <div className="flex items-center gap-12 flex-grow">
             <Link href={"/"} className="flex items-center gap-2">
@@ -34,7 +34,7 @@ const Header = () => {
                 Nurul Huda
               </h4>
             </Link>
-            <Link href={"/cart"} className="hidden md:flex items-center">
+            <Link href={"/cart"} className="hidden md:flex items-center gap-2">
               <RiShoppingBag3Line color="black" size={20} />
               <h4 className="text-CoolGray font-semibold text-sm">Cart(0)</h4>
             </Link>
