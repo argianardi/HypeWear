@@ -10,8 +10,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        OffWhite: "#F1F5F9",
+        CoolGray: "#292F3D",
+        SlateGray: "#4A4A4A",
+        AshGray: "#696969",
+        Red: "#FF3B30",
+        PureWhite: "#FFFFFF",
       },
     },
   },
