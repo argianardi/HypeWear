@@ -7,7 +7,7 @@ const SearchInput = () => {
       <BiSearch size={20} />
       <input
         type="text"
-        className="grow placeholder:text-sm  placeholder:font-normal "
+        className="grow placeholder:text-sm placeholder:font-normal "
         placeholder="Search"
       />
     </label>
