@@ -1,3 +1,38 @@
+export const featuredProducts = [
+  {
+    name: "Wireless Headphones",
+    image: "https://picsum.photos/200/300?random=1",
+    price: 120000,
+    discountPercentage: 10,
+    totalStock: 100,
+    availableStock: 30,
+  },
+  {
+    name: "Gaming Mouse",
+    image: "https://picsum.photos/200/300?random=2",
+    price: 250000,
+    discountPercentage: 20,
+    totalStock: 150,
+    availableStock: 120,
+  },
+  {
+    name: "Smartphone Stand",
+    image: "https://picsum.photos/200/300?random=3",
+    price: 175000,
+    discountPercentage: 15,
+    totalStock: 50,
+    availableStock: 10,
+  },
+  {
+    name: "Mechanical Keyboard",
+    image: "https://picsum.photos/200/300?random=4",
+    price: 300000,
+    discountPercentage: 25,
+    totalStock: 200,
+    availableStock: 50,
+  },
+];
+
 export const highlightedCategories = [
   "Oversized Hoodies",
   "Crop Tops",
@@ -61,7 +96,7 @@ export const productsCollection = [
 
 export const fakeProductCategories = [
   {
-    image: "https://picsum.photos/200/300?random=1",
+    image: "https://picsum.photos/200/300?electronics=1",
     name: "Electronics",
   },
   {
