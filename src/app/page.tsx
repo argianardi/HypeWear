@@ -1,17 +1,19 @@
 import CategorySection from "@/components/CategorySection";
+import FlashSaleSection from "@/components/FlashSaleSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import OurCollection from "@/components/OurCollection";
+import HeroSection from "@/components/HeroSection";
+import OurCollectionSection from "@/components/OurCollectionSection";
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)]">
+    <div className="overflow-x-hidden max-w-[1440px] mx-auto">
       <Header />
-      <main>
-        <Hero />
+      <main className="mt-[125px]">
+        <HeroSection />
+        <FlashSaleSection />
         <CategorySection />
-        <OurCollection />
+        <OurCollectionSection />
       </main>
       <Footer />
     </div>
