@@ -2,8 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes scrollToLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollToRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.animate-scroll-to-left {
+  display: flex;
+  gap: 1rem;
+  animation: scrollToLeft 40s linear infinite;
+}
+
+.animate-scroll-to-right {
+  display: flex;
+  gap: 1rem;
+  animation: scrollToRight 40s linear infinite;
+}
+
+.group:hover .animate-scroll-to-left,
+.group:hover .animate-scroll-to-right {
+  animation-play-state: paused;
 }

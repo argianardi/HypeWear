@@ -10,9 +10,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        OffWhite: "#F1F5F9",
+        CoolGray: "#292F3D",
+        SlateGray: "#4A4A4A",
+        AshGray: "#696969",
+        Red: "#FF3B30",
+        PureWhite: "#FFFFFF",
       },
+    },
+    screens: {
+      xs: "350px",
+      sm: "480px",
+      md: "768px",
+      lg: "992px",
+      xl: "1280px",
+      "2xl": "1440px",
+      "3xl": "1920px",
+      "4xl": "2560px",
+      "5xl": "3840px",
     },
   },
   plugins: [daisyui],
