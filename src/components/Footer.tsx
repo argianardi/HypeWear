@@ -35,14 +35,14 @@ const socialsMedia = [
 
 const Footer = () => {
   return (
-    <footer className="bg-CoolGray px-4 sm:px-9 pt-4 sm:pt-10 relative pb-9 sm:pb-28 overflow-hidden">
+    <footer className=" bg-CoolGray px-4 2xl:px-9 pt-4 2xl:pt-10 relative pb-9 2xl:pb-28 overflow-hidden">
       <div className="flex w-fit md:w-full mx-auto md:justify-between flex-col md:flex-row gap-4">
-        <div className="w-full sm:max-w-[500px] md:max-w-[322px]">
+        <div className="w-full 2xl:max-w-[500px] md:max-w-[322px]">
           <Link href={"/"} className="flex items-center gap-2">
             <Image src={"/logo.png"} width={28} height={28} alt="logo" />
             <span className="text-xl font-bold text-PureWhite"> HypeWear</span>
           </Link>
-          <p className="text-sm text-white font-normal mt-3">
+          <p className="text-xs md:text-sm text-white font-normal mt-3">
             Temukan koleksi pilihan yang dirancang untuk meningkatkan penampilan
             Anda. Mulai dari kebutuhan klasik hingga gaya terkini, semuanya ada
             di sini.
@@ -51,19 +51,22 @@ const Footer = () => {
         <div className="flex gap-6 lg:gap-12 flex-col lg:flex-row">
           <div className="flex gap-10">
             <div>
-              <h4 className="text-white text-base font-semibold">
+              <h4 className="text-white text-sm md:text-base font-semibold">
                 Pilihan Menu
               </h4>
               <ul>
                 <li className="mt-4 mb-3">
-                  <Link href={"/"} className=" text-white text-sm font-normal">
+                  <Link
+                    href={"/"}
+                    className=" text-white text-xs md:text-sm font-normal"
+                  >
                     Beranda
                   </Link>
                 </li>
                 <li>
                   <Link
                     href={"/cart"}
-                    className="text-white text-sm font-normal"
+                    className="text-white text-xs md:text-sm font-normal"
                   >
                     Keranjang
                   </Link>
@@ -71,14 +74,14 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h4 className="text-white text-base font-semibold">
+              <h4 className="text-white text-sm md:text-base font-semibold">
                 Layanan Customer
               </h4>
               <ul>
                 <li className="mt-4 mb-3">
                   <Link
                     href={"/help"}
-                    className="text-white text-sm font-normal"
+                    className="text-white text-xs md:text-sm font-normal"
                   >
                     Help Desk
                   </Link>
@@ -86,7 +89,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href={"/terms"}
-                    className="text-white text-sm font-normal"
+                    className="text-white text-xs md:text-sm font-normal"
                   >
                     Term and Condition
                   </Link>
