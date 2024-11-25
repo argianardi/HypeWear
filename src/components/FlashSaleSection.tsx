@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import FlashSaleProductCard from "./FlashSaleProductCard";
 import { featuredProducts } from "@/constans/fakeData";
 import Image from "next/image";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 const FlashSaleSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -102,63 +101,77 @@ const FlashSaleSection = () => {
         </p>
       </div>
 
-      <div className="h-[406px] w-[200px] 2xl:w-[387px] bg-[#FF6B35] rounded-lg relative">
-        <Image
-          src={"/cornerPattern.png"}
-          alt="cornerPattern"
-          width={175}
-          height={190}
-          className="absolute w-[107px] h-[107px] 2xl:h-[190px] 2xl:w-[175px] -top-9 2xl:-top-12 -left-8 2xl:-left-11"
-        />
+      <div className="h-[406px] w-full relative">
+        <div className="h-[406px] relative  w-[200px] 2xl:w-[387px] bg-[#FF6B35] rounded-lg ">
+          <Image
+            src={"/cornerPattern.png"}
+            alt="cornerPattern"
+            width={175}
+            height={190}
+            className="absolute w-[107px] h-[107px] 2xl:h-[190px] 2xl:w-[175px] -top-9 2xl:-top-12 -left-8 2xl:-left-11"
+          />
 
-        <div className="w-[128px] h-[178px] absolute bottom-7 left-3 2xl:bottom-8 2xl:left-8 leading-9 text-white">
-          <p className="text-lg 2xl:text-2xl font-bold leading-6 2xl:leading-9">
-            Potongan Harga
-          </p>
-          <p className="text-6xl font-bold leading-[72px]">
-            90<span className="text-2xl">%</span>
-          </p>
-          <p className="text-[10px] 2xl:text-sm font-bold mt-3 leading-4 2xl:leading-5">
-            Periode November
-          </p>
+          <div className="w-[128px] h-[178px] absolute bottom-7 left-3 2xl:bottom-8 2xl:left-8 leading-9 text-white">
+            <p className="text-lg 2xl:text-2xl font-bold leading-6 2xl:leading-9">
+              Potongan Harga
+            </p>
+            <p className="text-6xl font-bold leading-[72px]">
+              90<span className="text-2xl">%</span>
+            </p>
+            <p className="text-[10px] 2xl:text-sm font-bold mt-3 leading-4 2xl:leading-5">
+              Periode November
+            </p>
+          </div>
+
+          <Image
+            src={"/cornerPattern.png"}
+            alt="cornerPattern"
+            width={175}
+            height={190}
+            className="absolute w-[107px] h-[107px] 2xl:h-[190px] 2xl:w-[175px] -bottom-3 2xl:-bottom-[68px] -right-9 2xl:right-0 "
+          />
         </div>
+        <div className="absolute left-[120px] 2xl:left-[300px] rounded-lg overflow-x-auto top-6 w-full">
+          <div
+            className="flex 2xl:hidden pr-6 gap-4  2xl:w-full sm:w-[80%] overflow-x-auto xl:w-fit"
+            style={{
+              width: "calc(100% - 96px)",
+            }}
+          >
+            {featuredProducts?.map((product, index) => (
+              <FlashSaleProductCard
+                image={product.image}
+                price={product.price}
+                discountPercentage={product.discountPercentage}
+                totalStock={product.totalStock}
+                availableStock={product.availableStock}
+                name={product.name}
+                key={index}
+              />
+            ))}
+          </div>
 
-        <div
-          className="flex absolute -right-[200px] xl:-right-[942px] top-6 gap-4 2xl:w-fit  transition-transform duration-500 ease-in-out w-[300px] xl:w-fit"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {featuredProducts?.map((product, index) => (
-            <FlashSaleProductCard
-              image={product.image}
-              price={product.price}
-              discountPercentage={product.discountPercentage}
-              totalStock={product.totalStock}
-              availableStock={product.availableStock}
-              name={product.name}
-              key={index}
-            />
-          ))}
+          <div className="2xl:block hidden">
+            <div
+              className="flex pr-6 gap-4 2xl:w-full sm:w-[80%] overflow-x-auto xl:w-fit"
+              style={{
+                width: "calc(100% - 276px)",
+              }}
+            >
+              {featuredProducts?.map((product, index) => (
+                <FlashSaleProductCard
+                  image={product.image}
+                  price={product.price}
+                  discountPercentage={product.discountPercentage}
+                  totalStock={product.totalStock}
+                  availableStock={product.availableStock}
+                  name={product.name}
+                  key={index}
+                />
+              ))}
+            </div>
+          </div>
         </div>
-        <button
-          onClick={prevSlide}
-          className="absolute block xl:hidden left-2 bg-gray-700 text-white p-2 rounded-full hover:bg-gray-900 transform -translate-y-1/2 top-36"
-        >
-          <BsChevronLeft className="w-6 h-6" />
-        </button>
-
-        <button
-          onClick={nextSlide}
-          className="absolute right-2 block xl:hidden bg-gray-700 text-white p-2 rounded-full hover:bg-gray-900 transform -translate-y-1/2 top-36"
-        >
-          <BsChevronRight className="w-6 h-6" />
-        </button>
-        <Image
-          src={"/cornerPattern.png"}
-          alt="cornerPattern"
-          width={175}
-          height={190}
-          className="absolute w-[107px] h-[107px] 2xl:h-[190px] 2xl:w-[175px] -bottom-3 2xl:-bottom-[68px] -right-9 2xl:right-0 "
-        />
       </div>
     </div>
   );
