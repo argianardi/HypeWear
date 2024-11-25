@@ -1,5 +1,4 @@
 import { productsCollection } from "@/constans/fakeData";
-import React from "react";
 import BasicProductCard from "./BasicProductCard";
 
 const OurCollectionSection = () => {
@@ -8,7 +7,7 @@ const OurCollectionSection = () => {
       <h3 className="text-xl lg:text-2xl font-bold text-CoolGray">
         Koleksi Kami
       </h3>
-      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5 px-0 2xl:px-32">
         {productsCollection?.map((product, index) => (
           <BasicProductCard
             image={product.image}
