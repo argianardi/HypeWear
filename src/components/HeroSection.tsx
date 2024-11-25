@@ -1,13 +1,12 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { FaChevronRight } from "react-icons/fa";
 
 const HeroSection = () => {
   const handleScroll = () => {
     const target = document?.getElementById("our-collection");
-    const headerOffset = 100;
+    const headerOffset = 50;
 
     if (target) {
       const elementPosition =
@@ -23,14 +22,14 @@ const HeroSection = () => {
 
   return (
     <div
-      className="hero h-[580px]"
+      className="hero h-[580px] relative"
       style={{
         backgroundImage:
           "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
       }}
     >
-      <div className="hero-overlay bg-opacity-60" />
-      <div className="hero-content text-neutral-content text-center">
+      <div className=" bg-opacity-60 absolute inset-0 bg-black" />
+      <div className="absolute h-full w-full flex justify-center items-center">
         <div className="max-w-[500px] xl:max-w-[750px] px-1 md:px-4">
           {/* Logo */}
           <div className="flex items-center gap-2 mx-auto w-fit">
@@ -41,12 +40,12 @@ const HeroSection = () => {
           </div>
 
           {/* Heading */}
-          <h1 className="mt-6 mb-5 text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-6 xs:leading-7 sm:leading-8 md:leading-9 lg:leading-10 xl:leading-[48px] 2xl:leading-[56px] text-white font-semibold">
+          <h1 className="mt-6 mb-5 text-center text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-6 xs:leading-7 sm:leading-8 md:leading-9 lg:leading-10 xl:leading-[48px] 2xl:leading-[56px] text-white font-semibold">
             Ekspresikan Gaya mu dengan Koleksi Terbaru Kami
           </h1>
 
           {/* Paragraph */}
-          <p className="mb-5 text-white text-xs md:text-sm leading-4 2xl:leading-[21px] max-w-full md:max-w-[600px] mx-auto font-normal">
+          <p className="mb-5 text-white text-center text-xs md:text-sm leading-4 2xl:leading-[21px] max-w-full md:max-w-[600px] mx-auto font-normal">
             Temukan koleksi pilihan yang dirancang untuk menyempurnakan gaya mu.
             Dari kebutuhan klasik yang abadi hingga tren terbaru, setiap item
             dibuat untuk menciptakan kesan. Semua yang kamu butuhkan ada di satu
