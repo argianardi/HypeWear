@@ -30,5 +30,5 @@ export default {
       "5xl": "3840px",
     },
   },
-  plugins: [daisyui],
+  plugins: [],
 } satisfies Config;
