@@ -3,7 +3,6 @@ import {
   formatToRupiah,
 } from "@/utils/helperFunction";
 import Image from "next/image";
-import React from "react";
 
 interface FlashSaleProductCardProps {
   image: string;
